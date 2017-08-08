@@ -1,0 +1,125 @@
+{PAGE-ID}}/posts?fields=id,permalink_url,message,type,language,created_time,targeting,insights.metric(post_impressions_unique,post_impressions_organic_unique,post_impressions_paid_unique,post_impressions_organic,post_impressions_paid,post_engaged_users,post_consumptions_unique,post_consumptions,post_negative_feedback,post_impressions_fan,post_impressions_fan_unique,post_impressions_fan_paid,post_impressions_fan_paid_unique,post_engaged_fan,post_video_complete_views_organic_unique,post_video_complete_views_organic,post_video_complete_views_paid_unique,post_video_complete_views_paid,post_video_views_organic_unique,post_video_views_organic,post_video_views_paid_unique,post_video_views_paid,post_video_avg_time_watched,post_video_length).period(lifetime)
+Key Metrics:
+Required Permissions: user_posts, ads_read, ads_management
+	PostID = id
+	Permalink = permalink_url
+	Post Message = message
+	Type = type
+	Countries = ?
+	Languages = language
+	Posted = created_time
+	Audience Targeting = targeting
+	post_impressions_unique:lifetime = insights/post_impressions_unique?period=lifetime
+	post_impressions_organic_unique:lifetime = post_impressions_organic_unique
+	post_impressions_paid_unique:lifetime = post_impressions_paid_unique
+	post_impressions_organic:lifetime = post_impressions_organic
+	post_impressions_paid:lifetime = post_impressions_paid
+	post_engaged_users:lifetime = post_engaged_users
+	post_consumptions_unique:lifetime = post_consumptions_unique
+	post_consumptions:lifetime = post_consumptions
+	post_negative_feedback:lifetime = post_negative_feedback
+	post_impressions_fan:lifetime = post_impressions_fan
+	post_impressions_fan_unique:lifetime = post_impressions_fan_unique
+	post_impressions_fan_paid:lifetime = post_impressions_fan_paid
+	post_impressions_fan_paid_unique:lifetime = post_impressions_fan_paid_unique
+	post_engaged_fan:lifetime = post_engaged_fan
+	post_video_complete_views_organic_unique:lifetime = post_video_complete_views_organic_unique
+	post_video_complete_views_organic:lifetime = post_video_complete_views_organic
+	post_video_complete_views_paid_unique:lifetime = post_video_complete_views_paid_unique
+	post_video_complete_views_paid:lifetime = post_video_complete_views_paid
+	post_video_views_organic_unique:lifetime = post_video_views_organic_unique
+	post_video_views_organic:lifetime = post_video_views_organic
+	post_video_views_paid_unique:lifetime = post_video_views_paid_unique
+	post_video_views_paid:lifetime = post_video_views_paid
+	post_video_avg_time_watched:lifetime = post_video_avg_time_watched
+	post_video_length:lifetime = post_video_length
+
+Lifetime Talking About This:
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	like = 
+	share = 
+	comment = 
+
+Lifetime Post Stories by act...: 
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	like = 
+	share = 
+	comment = 
+
+Lifetime Post Consumers by Type:
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	photo view = 
+	other clicks = 
+	video play = 
+	link clicks = 
+
+Lifetime Post Consumptions b...:
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	photo view = 
+	other clicks = 
+	video play = 
+	link clicks = 
+
+Lifetime Negative Feedback f...: insights/page_negative_feedback_by_type?period=day&since=2017-01-01
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	hide_all_clicks = 
+	hide_clicks = 
+
+Lifetime Netagive Feeback:
+	Description = 
+	Post ID = 
+	Permalink = 
+	Post Message = 
+	Type = 
+	Countries = 
+	Languages = 
+	Posted = 
+	Audience = 
+	Targeting = 
+	hide_all_clicks = 
+	hide_clicks = 
