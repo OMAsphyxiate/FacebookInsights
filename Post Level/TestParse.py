@@ -9,7 +9,7 @@ import io
 
 CSVFile = "OKCSouthDDS_Lifetime_Post_Consumer.csv"
 
-access_token = "EAACEdEose0cBACpr4VCnxUExlYEqKj236jn5Q6itnytH2otTBKRO2vnY8x1ZBbeuROQZBJBXNuVVNg8bOTs1ZCHO6CkBovkkTsCQWwueEoYwwASZA2bqQE8qrHJzbu028GkVUmImlA154E4kgNxzZBOYtA081whMjnVnaqoDEqtoUJa7A8ncKZBPaBj7cf8ZCUZD"
+access_token = "EAACEdEose0cBAAthyla6qU10t3eKQIik85sfzdf9SlvlnQeYukjSRfNqnmODgZA5KLwZA7RjqYYb1WVQgrQajUh1uzQB1Bi7ObbtTFAGmYanVE1fgESjVQ2DXz4M0Pr7pr6EeZC5WxtbhjZCbj2LrJOZBeOOot69Hi3jDqD6Xse6eqBpZAZAMis6AQhFWBm2qIZD"
 
 
 postData = requests.get("https://graph.facebook.com/v2.10/OKCSouthDDS/posts?access_token="+access_token)
@@ -22,11 +22,18 @@ postFields = ('id,permalink_url,message,type,created_time,targeting,insights.met
 
 request_post = requests.get(url+postFields+"&access_token="+access_token)
 
+data = json.loads(request_post.text)
+
+review_parse = data['data']
 try:
 	os.remove('OKCSouthDDS_Lifetime_Post_Consumer.csv')
 except OSError:
 	pass
 
-with open(CSVFile, 'wb') as fd:
-	for chunk in request_post.iter_content(chunk_size=128):
-		fd.write(chunk)
+#Open file to write JSON data in CSV format
+review_data = open(CSVFile, 'w', newline='', encoding="utf-8")
+
+#Create CSV writer object
+csv_writer = csv.DictWriter(review_data,delimiter="|",fieldnames=csv_fields)
+csv_writer.writeheader()
+csv_writer.writerows(review_parse)
