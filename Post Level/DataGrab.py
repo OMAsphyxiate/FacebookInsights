@@ -1,15 +1,8 @@
-import requests
-import facebook
-import urllib3
-import pprint
-import json
-import csv
-import os
-import io
+import requests, facebook, urllib3, pprint, json, csv, io, os
 
 CSVFile = "OKCSouthDDS_Lifetime_Post_Consumer.csv"
 
-access_token = "EAACEdEose0cBACpr4VCnxUExlYEqKj236jn5Q6itnytH2otTBKRO2vnY8x1ZBbeuROQZBJBXNuVVNg8bOTs1ZCHO6CkBovkkTsCQWwueEoYwwASZA2bqQE8qrHJzbu028GkVUmImlA154E4kgNxzZBOYtA081whMjnVnaqoDEqtoUJa7A8ncKZBPaBj7cf8ZCUZD"
+access_token = "EAACEdEose0cBAAMViesknnPGUXZBdbP64iOR2kZAbrNkjq6ne43rQNiTTZBCCANXZAmDkc5h6FcYZBWKsxd1H2Q9pgtE1ExcoAWguoCDDpNA2t5NKZA6cboWTwZCDgBdeUJKpaaS5xUf61jCZBEvfvPYqM79KndzTOaF882nIQZBnGEQJeju3GP9N4CZCBXptWtaQZD"
 
 
 postData = requests.get("https://graph.facebook.com/v2.10/OKCSouthDDS/posts?access_token="+access_token)
@@ -20,13 +13,22 @@ url = 'https://graph.facebook.com/v2.10/OKCSouthDDS/posts?fields='
 csv_fields = ["ClinicID","id","permalink_url","message","type","created_time","targeting","video play","other clicks","photo view","link clicks"]
 postFields = ('id,permalink_url,message,type,created_time,targeting,insights.metric(post_consumptions_by_type_unique).period(lifetime)')
 
-request_post = requests.get(url+postFields+"&access_token="+access_token)
+request_post = requests.get(url+postFields+"&access_token="+access_token) #Sent REST request to GET data
 
 try:
-	os.remove('OKCSouthDDS_Lifetime_Post_Consumer.csv')
+	os.remove('OKCSouthDDS_Lifetime_Post_Consumer.csv') #Remove CSV file if already exists
 except OSError:
 	pass
 
-with open(CSVFile, 'wb') as fd:
-	for chunk in request_post.iter_content(chunk_size=128):
-		fd.write(chunk)
+json_data = json.loads(request_post.text) #Load JSON string into dictionary
+
+print (json_data['data']['id'])
+print (json_data['permalink_url'])
+print (json_data['message'])
+print (json_data['type'])
+print (json_data['created_time'])
+print (json_data['targeting'])
+print (json_data['insights']['video play'])
+print (json_data['insights']['other clicks'])
+print (json_data['insights']['photo view'])
+print (json_data['insights']['link clicks'])
