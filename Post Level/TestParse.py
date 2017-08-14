@@ -3,15 +3,39 @@ import facebook, requests
 def some_action(post):
     print(post['id'])
     print(post['permalink_url'])
-    print(post['message'])
-    print(post['type'])
+    try:
+        print(post['message'])
+    except:
+        print("No Message")
+    try:
+        print(post['type'])
+    except:
+        print("No Type")
     print(post['created_time'])
-    print(post['insights']['data'][0]['name'])
-    print(post['insights']['data'][0]['period'])
-    print(post['insights']['data'][0]['values'][0]['value']['video play'])
-    print(post['insights']['data'][0]['values'][0]['value']['other clicks'])
-    print(post['insights']['data'][0]['values'][0]['value']['photo view'])
-    print(post['insights']['data'][0]['values'][0]['value']['link clicks'])
+    try:
+        print(post['insights']['data'][0]['name'])
+    except:
+        print("No Insights Name")
+    try:
+        print(post['insights']['data'][0]['period'])
+    except:
+        print("No Insights Period")
+    try:
+        print(post['insights']['data'][0]['values'][0]['value']['video play'])
+    except:
+        print("0")
+    try:
+        print(post['insights']['data'][0]['values'][0]['value']['other clicks'])
+    except:
+        print("0")
+    try:
+        print(post['insights']['data'][0]['values'][0]['value']['photo view'])
+    except:
+        print("0")
+    try:
+        print(post['insights']['data'][0]['values'][0]['value']['link clicks'])
+    except:
+        print("0")
 
 
 # You'll need an access token here to do anything.  You can get a temporary one
