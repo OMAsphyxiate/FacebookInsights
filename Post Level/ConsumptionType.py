@@ -1,7 +1,7 @@
 import facebook, requests, csv, os, unicodecsv as csv
 
-access_token = 'EAACEdEose0cBAJ80WfnrMRc3KG9s9ZCQcoVKPHPRZB6KahcfrCYMrrV2D5IdhgnoqbvEGqlFng5s8r0GBFHLZCXfXtjkhBunP54L8WvS8rKSDLJ8DbZBozdFNXlIWaZAsxfgZAGH6iKU17MiYBFmgyzThyD2JGogJsuI8nITVCViNZB8AdviObHZC4UCQImshJ8ZD'
-user = '159442580756185' #Page ID
+access_token = ''
+user = '' #Page ID
 
 def WriteFile(filename,*args): #Write file in network storage
     FilePath = "//10.10.10.252/datafiles/Dashboard/Facebook Data/%s.txt" %filename
@@ -40,23 +40,38 @@ def declare_values(post):
     except:
         var7 = 'No Insights Period'
     try:
-        var8 = post['insights']['data'][0]['values'][0]['value']['video play']
+        var8 = post['insights']['data'][0]['values'][0]['value']['video play'].replace('{}', 0)
+        if var8 == "":
+            var8=0
+        else:
+            pass
     except:
         var8 = 0
     try:
-        var9 = post['insights']['data'][0]['values'][0]['value']['other clicks']
+        var9 = post['insights']['data'][0]['values'][0]['value']['other clicks'].replace('{}', 0)
+        if var9 == "":
+            var9=0
+        else:
+            pass
     except:
         var9 = 0
     try:
-        var10 = post['insights']['data'][0]['values'][0]['value']['photo view']
+        var10 = post['insights']['data'][0]['values'][0]['value']['photo view'].replace('{}', 0)
+        if var10 == "":
+            var10=0
+        else:
+            pass
     except:
         var10 = 0
     try:
-        var11 = post['insights']['data'][0]['values'][0]['value']['link clicks']
+        var11 = post['insights']['data'][0]['values'][0]['value']['link clicks'].replace('{}', 0)
+        if var11 == "":
+            var11=0
+        else:
+            pass
     except:
         var11 = 0
-    WriteFile('ConsumptionUnique', user,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11) #Write data to file
-    #WriteFile('KeyMetrics.txt', var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11)
+    WriteFile('ConsumptionType', user,var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11) #Write data to file
     #PrintValues(var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11)
     #CheckType(var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11)
 
@@ -66,7 +81,7 @@ def declare_values(post):
 # Look at Bill Gates's profile for this example by using his Facebook id.
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_consumptions_by_type_unique).period(lifetime)')
+posts = graph.get_connections(profile['id'], 'posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_interests_consumptions_by_type).period(lifetime)')
 
 # Wrap this block in a while loop so we can keep paginating requests until
 # finished.

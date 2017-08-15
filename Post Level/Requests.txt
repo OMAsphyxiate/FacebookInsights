@@ -1,4 +1,4 @@
-{PAGE-ID}}/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_impressions_unique,post_impressions_organic_unique,post_impressions_paid_unique,post_impressions_organic,post_impressions_paid,post_engaged_users,post_consumptions_unique,post_consumptions,post_negative_feedback,post_impressions_fan,post_impressions_fan_unique,post_impressions_fan_paid,post_impressions_fan_paid_unique,post_engaged_fan,post_video_complete_views_organic_unique,post_video_complete_views_organic,post_video_complete_views_paid_unique,post_video_complete_views_paid,post_video_views_organic_unique,post_video_views_organic,post_video_views_paid_unique,post_video_views_paid,post_video_avg_time_watched,post_video_length).period(lifetime)
+{PAGE-ID}}/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_impressions_unique,post_impressions_organic_unique,post_impressions_paid_unique,post_impressions_organic,post_impressions_paid,post_engaged_users,post_consumptions_unique,post_consumptions,post_negative_feedback,post_impressions_fan,post_impressions_fan_unique,post_impressions_fan_paid,post_impressions_fan_paid_unique,post_engaged_fan,post_video_complete_views_organic_unique,post_video_complete_views_organic,post_video_complete_views_paid_unique,post_video_complete_views_paid,post_video_views_organic_unique,post_video_views_organic,post_video_views_paid_unique,post_video_views_paid,post_video_avg_time_watched,post_video_length).period(lifetime)
 Key Metrics:
 Required Permissions: user_posts, ads_read, ads_management
 	PostID = id
@@ -34,92 +34,94 @@ Required Permissions: user_posts, ads_read, ads_management
 	post_video_avg_time_watched:lifetime = post_video_avg_time_watched
 	post_video_length:lifetime = post_video_length
 
-Lifetime Talking About This:
-{PAGE-ID}}/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_story_adds_by_action_type_unique).period(lifetime)
-	Description = ?
-	PostID = id
-	Permalink = permalink_url
-	Post Message = message
-	Type = type
-	Countries = ?
-	Languages = ?
-	Posted = created_time
-	Audience Targeting = (No permissions or wrong field)
-	like = 
-	share = 
-	comment = 
+		Lifetime Story by Action Type Unique:
+		{PAGE-ID}}/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_story_adds_by_action_type_unique).period(lifetime)
+			Description = ?
+			PostID = id
+			Permalink = permalink_url
+			Post Message = message
+			Type = type
+			Countries = ?
+			Languages = ?
+			Posted = created_time
+			Audience Targeting = (No permissions or wrong field)
+			like = 
+			comment =
+			share =  
 
-Lifetime Post Stories by act...: 
-{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_story_adds_by_action_type).period(lifetime)
-	Description = ?
-	PostID = id
-	Permalink = permalink_url
-	Post Message = message
-	Type = type
-	Countries = ? (Unknown Field)
-	Languages = ? (Unknown Field)
-	Posted = created_time
-	Audience Targeting = ? (No permissions or wrong field)
-	like = 
-	share = 
-	comment = 
+		Lifetime Post Stories by Action Type...: 
+		{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_story_adds_by_action_type).period(lifetime)
+			Description = ?
+			PostID = id
+			Permalink = permalink_url
+			Post Message = message
+			Type = type
+			Countries = ? (Unknown Field)
+			Languages = ? (Unknown Field)
+			Posted = created_time
+			Audience Targeting = ? (No permissions or wrong field)
+			like = 
+			comment =
+			share =  
 
-Lifetime Post Consumers by Type:
-OKCSouthDDS/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_consumptions_by_type_unique).period(lifetime)
-	Description = ?
-	PostID = id
-	Permalink = permalink_url
-	Post Message = message
-	Type = type
-	Countries = ? (Unknown Field)
-	Languages = ? (Unknown Field)
-	Posted = created_time
-	Audience Targeting = (No permissions or wrong field)
-	photo view = 
-	other clicks = 
-	video play = 
-	link clicks = 
+		Lifetime Post Consumers by Type Unique:
+		OKCSouthDDS/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_consumptions_by_type_unique).period(lifetime)
+			Description = ?
+			PostID = id
+			Permalink = permalink_url
+			Post Message = message
+			Type = type
+			Countries = ? (Unknown Field)
+			Languages = ? (Unknown Field)
+			Posted = created_time
+			Audience Targeting = (No permissions or wrong field)
+			photo view = 
+			other clicks = 
+			video play = 
+			link clicks = 
 
-Lifetime Post Consumptions b...: The stats for Insights are not displaying in JSON
-OKCSouthDDS/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_interests_consumptions_by_type).period(lifetime)
-	Description = ?
-	PostID = id
-	Permalink = permalink_url
-	Post Message = message
-	Type = type
-	Countries = ? (Unknown Field)
-	Languages = ? (Unknown Field)
-	Posted = created_time
-	Audience Targeting = (No permissions or wrong field)
-	photo view = 
-	other clicks = 
-	video play = 
-	link clicks = 
+		Lifetime Post Consumers by Type: The stats for Insights are not displaying in JSON
+		OKCSouthDDS/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_interests_consumptions_by_type).period(lifetime)
+			Description = ?
+			PostID = id
+			Permalink = permalink_url
+			Post Message = message
+			Type = type
+			Countries = ? (Unknown Field)
+			Languages = ? (Unknown Field)
+			Posted = created_time
+			Audience Targeting = (No permissions or wrong field)
+			photo view = 
+			other clicks = 
+			video play = 
+			link clicks = 
 
-Lifetime Negative Feedback f...:
-{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_negative_feedback_by_type).period(lifetime)
-	Description = 
-	Post ID = 
-	Permalink = 
-	Post Message = 
-	Type = 
-	Countries = ? (Unknown Field)
-	Languages = ? (Unknown Field)
-	Posted = 
-	Audience Targeting = ? (No permissions or wrong field)
-	hide_all_clicks = 
-	hide_clicks = 
+		Lifetime Negative Feedback by Type:
+		{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_negative_feedback_by_type).period(lifetime)
+			Description = 
+			Post ID = 
+			Permalink = 
+			Post Message = 
+			Type = 
+			Countries = ? (Unknown Field)
+			Languages = ? (Unknown Field)
+			Posted = 
+			Audience Targeting = ? (No permissions or wrong field)
+			hide_all_clicks = 
+			hide_clicks = 
+			report_spam_clicks = 
 
-Lifetime Netagive Feeback:
-{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,targeting,insights.metric(post_negative_feedback_by_type_unique).period(lifetime)
-	Description = 
-	Post ID = 
-	Permalink = 
-	Post Message = 
-	Type = 
-	Countries = ? (Unknown Field)
-	Languages = ? (Unknown Field)
-	Posted = 
-	Audience Targeting = ? (No permissions or wrong field)
-	hide_all_clicks = 
-	hide_clicks = 
+		Lifetime Netagive Feeback by Type Unique:
+		{PAGE-ID}/posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_negative_feedback_by_type_unique).period(lifetime)
+			Description = 
+			Post ID = 
+			Permalink = 
+			Post Message = 
+			Type = 
+			Countries = ? (Unknown Field)
+			Languages = ? (Unknown Field)
+			Posted = 
+			Audience Targeting = ? (No permissions or wrong field)
+			hide_all_clicks = 
+			hide_clicks =
+			report_spam_clicks =  
