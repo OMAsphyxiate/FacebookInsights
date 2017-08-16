@@ -68,119 +68,6 @@ Daily Like Source:
 	mobile:
 	page_profile:
 
-
-Daily Total Frequency Distribution:
-{PAGE-ID}}/insights/page_impressions_frequency_distribution?since=2017-07-07
-
-	Description: 
-	Date:
-	1:
-	2:
-	3:
-	4:
-	5:
-	6-10:
-	11-20:
-	21+:
-
-
-Daily Page Posts Frequence Distrubtion:
-{PAGE-ID}/insights/page_posts_impressions_frequency_distribution?since=2017-07-07
-
-	Description: 
-	Date:
-	1:
-	2:
-	3:
-	4:
-	5:
-	6-10:
-	11-20:
-
-
-Daily Page Stories By Story: Not all fields are always in the JSON, need to search for them somehow when creating files
-{PAGE-ID]}/insights/page_stories_by_story_type?since=2017-07-07
-
-	Description:
-	Date:
-	checkin:
-	coupon:
-	event:
-	fan:
-	mention:
-	other:
-	page post:
-	question:
-	user post:
-
-Daily Page Consumption By Type: Not all fields are always in the JSON, need to search for them somehow when creating files
-{PAGE-ID}/insights/page_consumptions_by_consumption_type?since=2017-07-07
-
-	Description:
-	Date:
-	button clicks:
-	link clicks:
-	other clicks:
-	photo view:
-	video play:
-
-Daily Reach Demographics: Not all fields are always in the JSON, need to search for them somehow when creating files
-{PAGE-ID}/insights/page_impressions_by_age_gender_unique?since=2017-07-07
-
-	Description:
-	Date:
-	F.13-17:
-	F.18-24:
-	F.25-34:
-	F.35-44:
-	F.45-54:
-	F.55-64:
-	F.65+:
-	M.13-17:
-	M.18-24:
-	M.25-34:
-	M.35-44:
-	M.45-54:
-	M.55-64:
-	M.65+:
-	U.13-17:
-	U.18-24:
-	U.25-34:
-	U.35-44:
-	U.45-54:
-	U.55-64:
-	U.65+:
-
-
-Daily Demographics People Ta...: Not all fields are always in the JSON, need to search for them somehow when creating files
-{PAGE-ID}}/insights/page_story_adds_by_age_gender_unique?since=2017-07-07
-
-	Description:
-	Date:
-	F.13-17:
-	F.18-24:
-	F.25-34:
-	F.35-44:
-	F.45-54:
-	F.55-64:
-	F.65+:
-	M.13-17:
-	M.18-24:
-	M.25-34:
-	M.35-44:
-	M.45-54:
-	M.55-64:
-	M.65+:
-	U.13-17:
-	U.18-24:
-	U.25-34:
-	U.35-44:
-	U.45-54:
-	U.55-64:
-	U.65+:
-
-
-
 Daily City People Talking About (by City): The cities are going to differ each time; need to script this to grab whatever is available
 
 	Description:
@@ -190,15 +77,6 @@ Daily City People Talking About (by City): The cities are going to differ each t
 	City(x):
 
 
-Daily Language People Talking: These will probably differ from time to time
-{PAGE-ID}/insights/page_storytellers_by_locale?since=2017-07-07
-
-	Description:
-	Date:
-	en_GB: 
-	en_US: 
-	es_LA:
-
 Daily Country People Talking: These will probably differ from time to time
 {PAGE-ID}/insights/page_storytellers_by_country?since=2017-07-07
 	
@@ -206,7 +84,6 @@ Daily Country People Talking: These will probably differ from time to time
 	Date:
 	MX:
 	US:
-
 
 Daily Logged-in Tab View: Not all fields are always in the JSON, need to search for them somehow when creating files
 {PAGE-ID}/insights/page_tab_views_login_top_unique?since=2017-07-07
@@ -227,7 +104,6 @@ Daily Logged-in Tab View: Not all fields are always in the JSON, need to search 
 	services:
 	videos:
 
-
 Daily External Referrers: Not all fields are always in the JSON, need to search for them somehow when creating files 
 {PAGE-ID}/insights/page_views_external_referrals?since=2017-07-07
 
@@ -237,29 +113,6 @@ Daily External Referrers: Not all fields are always in the JSON, need to search 
 	Domain(2):
 	Domain(x):
 
-
-Daily Negative Feedback by Type:
-{PAGE-ID}/insights/page_negative_feedback_by_type_unique?since=2017-07-07
-
-	Description:
-	Date:
-	hide_all_clicks:
-	hide_clicks:
-	report_spam_clicks:
-	unlike_page_clicks:
-	xbutton_clicks:
-
-
-Daily Negative Feeback From...:
-{PAGE-ID}/insights/page_negative_feedback_by_type?since=2017-07-07
-
-	Description:
-	Date:
-	hide_all_clicks:
-	hide_clicks:
-	report_spam_clicks:
-	unlike_page_clicks:
-	xbutton_clicks:
 
 Daily Check-Ins by Gender an...: Unsure if this is the correct metric as there is no data to compare
 {PAGE-ID}}/insights/page_places_checkins_by_age_gender?since=2017-07-07
@@ -282,33 +135,6 @@ Daily Check-Ins by Country: Unsure if this is the correct metric as there is no 
 	Description:
 	Date:
 	2:
-
-
-Daily Positive Feedback From...:
-{PAGE-ID}/insights/page_positive_feedback_by_type?since=2017-07-07
-
-	Description:
-	Date: 
-	answer: 
-	claim: 
-	comment: 
-	like:
-	link:
-	other:
-
-
-
-Daily Positive Feedback F...001:
-{PAGE-ID}/insights/page_positive_feedback_by_type_unique?since=2017-07-07
-
-	Description:
-	Date: 
-	answer: 
-	claim: 
-	comment: 
-	like:
-	link:
-	other:
 
 
 Daily Liked and Online:
@@ -341,42 +167,14 @@ Daily Liked and Online:
 	22:
 	23:
 
+				Lifetime Likes by City: Fields will vary each time
+				{PAGE-ID}/insights/page_fans_city?since=2017-07-07
 
-Lifetime Likes by Gender and...: Fields may be missing when no data is available
-{PAGE-ID}/insights/page_fans_gender_age?since=2017-07-07
-
-	Description: 
-	Date:
-	F.13-17:
-	F.18-24:
-	F.25-34:
-	F.35-44:
-	F.45-54:
-	F.55-64:
-	F.65+:
-	M.13-17:
-	M.18-24:
-	M.25-34:
-	M.35-44:
-	M.45-54:
-	M.55-64:
-	M.65+:
-	U.13-17:
-	U.18-24:
-	U.25-34:
-	U.35-44:
-	U.45-54:
-	U.55-64:
-	U.65+:
-
-Lifetime Likes by City: Fields will vary each time
-{PAGE-ID}/insights/page_fans_city?since=2017-07-07
-
-	Description:
-	Date:
-	City(1):
-	City(2):
-	City(x):
+					Description:
+					Date:
+					City(1):
+					City(2):
+					City(x):
 
 Lifetime Likes by Country: Fields will vary each time
 {PAGE-ID}/insights/page_fans_country?since=2017-07-07
@@ -398,90 +196,198 @@ Lifetime Likes by Language: Fields will vary
 	fr_FR: 
 	uz_UZ: 
 
+				Daily Total Frequency Distribution:
+				{PAGE-ID}}/insights/page_impressions_frequency_distribution?since=2017-07-07
 
-28 Days Total Frequency Distribution: This pulls all the different periods, need only 28_days
-{PAGE-ID}/insights/page_impressions_frequency_distribution?since=2017-07-07
+					Description: 
+					Date:
+					1:
+					2:
+					3:
+					4:
+					5:
+					6-10:
+					11-20:
+					21+:
 
-	Description:
-	Date:
-	1:
-	2:
-	3:
-	4:
-	5:
-	6-10:
-	11:20:
-	21+:
+				28 Days Total Frequency Distribution: This pulls all the different periods, need only 28_days
+				{PAGE-ID}/insights/page_impressions_frequency_distribution?since=2017-07-07
 
+					Description:
+					Date:
+					1:
+					2:
+					3:
+					4:
+					5:
+					6-10:
+					11:20:
+					21+:
 
-28 Days Page Stories By Story Type: This pulls all the different periods, need only 28_days
-{PAGE-ID}/insights/page_stories_by_story_type?since=2017-07-07
+				28 Days Page Stories By Story Type: This pulls all the different periods, need only 28_days
+				{PAGE-ID}/insights/page_stories_by_story_type?since=2017-07-07
 
-	Description:
-	Date:
-	checkin:
-	coupon:
-	event:
-	fan:
-	mention:
-	other:
-	page post:
-	question:
-	user post:
+					Description:
+					Date:
+					checkin:
+					coupon:
+					event:
+					fan:
+					mention:
+					other:
+					page post:
+					question:
+					user post:
 
-28 Days Reach Demographics: This pulls all the different periods, need only 28_days
-{PAGE-ID}/insights/page_impressions_by_age_gender_unique?since=2017-07-07
+				Daily Page Stories By Story: Not all fields are always in the JSON, need to search for them somehow when creating files
+				{PAGE-ID]}/insights/page_stories_by_story_type?since=2017-07-07
 
-	Description:
-	Date:
-	F.13-17:
-	F.18-24:
-	F.25-34:
-	F.35-44:
-	F.45-54:
-	F.55-64:
-	F.65+:
-	M.13-17:
-	M.18-24:
-	M.25-34:
-	M.35-44:
-	M.45-54:
-	M.55-64:
-	M.65+:
-	U.13-17:
-	U.18-24:
-	U.25-34:
-	U.35-44:
-	U.45-54:
-	U.55-64:
-	U.65+:	
+					Description:
+					Date:
+					checkin:
+					coupon:
+					event:
+					fan:
+					mention:
+					other:
+					page post:
+					question:
+					user post:
 
-28 Days Demographics People: This pulls all the different periods, need only 28_days
-{PAGE-ID}/insights/page_storytellers_by_age_gender?since=2017-07-07
+				28 Days Reach Demographics: This pulls all the different periods, need only 28_days
+				{PAGE-ID}/insights/page_impressions_by_age_gender_unique?since=2017-07-07
 
-	Description:
-	Date:
-	F.13-17:
-	F.18-24:
-	F.25-34:
-	F.35-44:
-	F.45-54:
-	F.55-64:
-	F.65+:
-	M.13-17:
-	M.18-24:
-	M.25-34:
-	M.35-44:
-	M.45-54:
-	M.55-64:
-	M.65+:
-		U.13-17:
-		U.18-24:
-		U.25-34:
-		U.35-44:
-		U.45-54:
-		U.55-64:
-		U.65+:
+					Description:
+					Date:
+					F.13-17:
+					F.18-24:
+					F.25-34:
+					F.35-44:
+					F.45-54:
+					F.55-64:
+					F.65+:
+					M.13-17:
+					M.18-24:
+					M.25-34:
+					M.35-44:
+					M.45-54:
+					M.55-64:
+					M.65+:
+					U.13-17:
+					U.18-24:
+					U.25-34:
+					U.35-44:
+					U.45-54:
+					U.55-64:
+					U.65+:	
+
+				Daily Reach Demographics: Not all fields are always in the JSON, need to search for them somehow when creating files
+				{PAGE-ID}/insights/page_impressions_by_age_gender_unique?since=2017-07-07
+
+					Description:
+					Date:
+					F.13-17:
+					F.18-24:
+					F.25-34:
+					F.35-44:
+					F.45-54:
+					F.55-64:
+					F.65+:
+					M.13-17:
+					M.18-24:
+					M.25-34:
+					M.35-44:
+					M.45-54:
+					M.55-64:
+					M.65+:
+					U.13-17:
+					U.18-24:
+					U.25-34:
+					U.35-44:
+					U.45-54:
+					U.55-64:
+					U.65+:
+
+				28 Days Demographics People: This pulls all the different periods, need only 28_days
+				{PAGE-ID}/insights/page_storytellers_by_age_gender?since=2017-07-07
+
+					Description:
+					Date:
+					F.13-17:
+					F.18-24:
+					F.25-34:
+					F.35-44:
+					F.45-54:
+					F.55-64:
+					F.65+:
+					M.13-17:
+					M.18-24:
+					M.25-34:
+					M.35-44:
+					M.45-54:
+					M.55-64:
+					M.65+:
+						U.13-17:
+						U.18-24:
+						U.25-34:
+						U.35-44:
+						U.45-54:
+						U.55-64:
+						U.65+:
+
+				Lifetime Likes by Gender and...: Fields may be missing when no data is available
+				{PAGE-ID}/insights/page_fans_gender_age?since=2017-07-07
+
+					Description: 
+					Date:
+					F.13-17:
+					F.18-24:
+					F.25-34:
+					F.35-44:
+					F.45-54:
+					F.55-64:
+					F.65+:
+					M.13-17:
+					M.18-24:
+					M.25-34:
+					M.35-44:
+					M.45-54:
+					M.55-64:
+					M.65+:
+					U.13-17:
+					U.18-24:
+					U.25-34:
+					U.35-44:
+					U.45-54:
+					U.55-64:
+					U.65+:
+
+				Daily Demographics People Ta...: Not all fields are always in the JSON, need to search for them somehow when creating files
+				{PAGE-ID}}/insights/page_story_adds_by_age_gender_unique?since=2017-07-07
+
+					Description:
+					Date:
+					F.13-17:
+					F.18-24:
+					F.25-34:
+					F.35-44:
+					F.45-54:
+					F.55-64:
+					F.65+:
+					M.13-17:
+					M.18-24:
+					M.25-34:
+					M.35-44:
+					M.45-54:
+					M.55-64:
+					M.65+:
+					U.13-17:
+					U.18-24:
+					U.25-34:
+					U.35-44:
+					U.45-54:
+					U.55-64:
+					U.65+:
 
 28 Days Days City People Talking About Page: Only days_28 data is relevant, fields will change each pull
 {PAGE-ID}/insights/page_story_adds_by_city_unique?since=2017-07-07
@@ -491,7 +397,6 @@ Lifetime Likes by Language: Fields will vary
 	City(1):
 	City(2):
 	City(x):
-
 
 28 Days Country People Talking About Page: Only days_28 data is relevant, fields will change possibly each pull
 {PAGE-ID}/insights/page_story_adds_by_country_unique?since=2017-07-07
@@ -511,78 +416,152 @@ Lifetime Likes by Language: Fields will vary
 	es_ES:
 	es_LA:
 
-
-28 Days Negative Feedback by Type Unique: Only days_28 data is relevant
-{PAGE-ID}/insights/page_negative_feedback_by_type_unique?since=2017-07-07
-	
-	Description:
-	Date:
-	hide_all_clicks:
-	hide_clicks:
-	report_spam_clicks:
-	unlike_page_clicks:
-	xbutton_clicks:
-
-
-28 Days Negative Feedback by Type Total: Only days_28 data is relevant
-{PAGE-ID}/insights/page_negative_feedback_by_type?since=2017-07-07
-
-	Descriptioni:
-	Date:
-	hide_all_clicks:
-	hide_clicks:
-	report_spam_clicks:
-	unlike_page_clicks:
-	xbutton_clicks:
-
-
-28 Days Positive Feedback by Type Unique: Only days_28 data is relevant
-{PAGE-ID}/insights/page_positive_feedback_by_type_unique?since=2017-07-07
+Daily Language People Talking: These will probably differ from time to time
+{PAGE-ID}/insights/page_storytellers_by_locale?since=2017-07-07
 
 	Description:
 	Date:
-	answer:
-	claim:
-	comment:
-	like:
-	link:
-	other:
+	en_GB: 
+	en_US: 
+	es_LA:
 
+				28 Days Negative Feedback by Type Unique: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_negative_feedback_by_type_unique?since=2017-07-07
+					
+					Description:
+					Date:
+					hide_all_clicks:
+					hide_clicks:
+					report_spam_clicks:
+					unlike_page_clicks:
+					xbutton_clicks:
 
-28 Days Positive Feedback by Type Total: Only days_28 data is relevant
-{PAGE-ID}/insights/page_positive_feedback_by_type?since=2017-07-07
+				Daily Negative Feedback by Type:
+				{PAGE-ID}/insights/page_negative_feedback_by_type_unique?since=2017-07-07
 
-	Description:
-	Date:
-	answer:
-	claim:
-	comment:
-	like:
-	link:
-	other:
+					Description:
+					Date:
+					hide_all_clicks:
+					hide_clicks:
+					report_spam_clicks:
+					unlike_page_clicks:
+					xbutton_clicks:
 
+				28 Days Negative Feedback by Type Total: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_negative_feedback_by_type?since=2017-07-07
 
-28 Days Page Consumptions by Type: Only days_28 data is relevant
-{PAGE-ID}/insights/page_consumptions_by_consumption_type?since=2017-07-07
+					Descriptioni:
+					Date:
+					hide_all_clicks:
+					hide_clicks:
+					report_spam_clicks:
+					unlike_page_clicks:
+					xbutton_clicks:
 
-	Description:
-	Date:
-	button clicks:
-	link clicks:
-	other clicks:
-	photo view:
-	video play:
+				Daily Negative Feeback From...:
+				{PAGE-ID}/insights/page_negative_feedback_by_type?since=2017-07-07
 
-28 Days Page Posts Frequency Distribution: Only days_28 data is relevant
-{PAGE-ID}/insights/page_posts_impressions_frequency_distribution?since=2017-07-07
+					Description:
+					Date:
+					hide_all_clicks:
+					hide_clicks:
+					report_spam_clicks:
+					unlike_page_clicks:
+					xbutton_clicks:
 
-	Description:
-	Date:
-	1:
-	2:
-	3:
-	4:
-	5:
-	6-10:
-	11-20:
-	21+:
+				28 Days Positive Feedback by Type Total: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_positive_feedback_by_type?since=2017-07-07
+
+					Description:
+					Date:
+					answer:
+					claim:
+					comment:
+					like:
+					link:
+					other:
+
+				Daily Positive Feedback From...:
+				{PAGE-ID}/insights/page_positive_feedback_by_type?since=2017-07-07
+
+					Description:
+					Date: 
+					answer: 
+					claim: 
+					comment: 
+					like:
+					link:
+					other:
+
+				Daily Positive Feedback F...001:
+				{PAGE-ID}/insights/page_positive_feedback_by_type_unique?since=2017-07-07
+
+					Description:
+					Date: 
+					answer: 
+					claim: 
+					comment: 
+					like:
+					link:
+					other:
+
+				28 Days Positive Feedback by Type Unique: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_positive_feedback_by_type_unique?since=2017-07-07
+
+					Description:
+					Date:
+					answer:
+					claim:
+					comment:
+					like:
+					link:
+					other:
+
+				28 Days Page Consumptions by Type: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_consumptions_by_consumption_type?since=2017-07-07
+
+					Description:
+					Date:
+					button clicks:
+					link clicks:
+					other clicks:
+					photo view:
+					video play:
+
+				Daily Page Consumption By Type: Not all fields are always in the JSON, need to search for them somehow when creating files
+				{PAGE-ID}/insights/page_consumptions_by_consumption_type?since=2017-07-16
+
+					Description:
+					Date:
+					button clicks:
+					link clicks:
+					other clicks:
+					photo view:
+					video play:
+
+				28 Days Page Posts Frequency Distribution: Only days_28 data is relevant
+				{PAGE-ID}/insights/page_posts_impressions_frequency_distribution?since=2017-07-07
+
+					Description:
+					Date:
+					1:
+					2:
+					3:
+					4:
+					5:
+					6-10:
+					11-20:
+					21+:
+
+				Daily Page Posts Frequence Distrubtion:
+				{PAGE-ID}/insights/page_posts_impressions_frequency_distribution?since=2017-07-07
+
+					Description: 
+					Date:
+					1:
+					2:
+					3:
+					4:
+					5:
+					6-10:
+					11-20:
