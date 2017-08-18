@@ -1,6 +1,6 @@
 import csv, facebook, datetime, os
 
-access_token = 'EAACEdEose0cBABuGb5pZCw6jGB0RRxRvWHz2aRscmUUOxbpIqqJZB6uG2anZAoUb9jXNqycvUiLJlT6EwhCXwHabJyDutZAFioxVQYL5POR6jO8fhIlEHUjh6LEDkuvJOtIhPtAWt4g6x1hV2k0UkwJHaEwZCCmg5ZCcO2Kxx3lcMKilZBIBeGNmnZB7KuSdm3Bh0p5occFIZBgZDZD'
+access_token = 'EAACEdEose0cBAOzR56ZByTauMIe64hYPAMyNkZCZC96EHpmfs4BApNMMAWD0lzIy96hvZCBr5tQOsys5AKxV05Ik404HprsZBbdX2otDg3k40gTCVnmaq0SNsqUfDrl5ZB3PqH9coeGBvS1KX036bjwBzhlrGSSveVS3DtPcvnxoGjGrTQcH9J3ZA6YbsTqiZBQZD'
 user = '159442580756185' #Page ID
 
 def PrintValues(*args): #Testing API data in print console
@@ -19,7 +19,7 @@ def WriteFile(filename,*args): #Write file in network storage
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_story_adds_by_age_gender_unique?since=%s' %daterange)
+posts = graph.get_connections(profile['id'], 'insights/page_impressions_by_age_gender_unique?since=%s' %daterange)
 
 for post in posts['data']:
     var1 = post['name']
@@ -113,5 +113,5 @@ for post in posts['data']:
         except:
             var40 = 0
         var41 = value['end_time']
-        WriteFile('StoryByAgeGenderUnique', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32,var33,var34,var35,var36,var37,var38,var39,var40,var41)
+        WriteFile('ImpressionsAgeGender', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32,var33,var34,var35,var36,var37,var38,var39,var40,var41)
         #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)

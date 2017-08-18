@@ -59,31 +59,22 @@ Key Metrics:
 	page_video_views_organic:days_28
 
 
-Daily Like Source:
-{PAGE-ID}/insights/page_fans_by_like_source_unique?since=2017-07-01
+				Daily Like Source:
+				{PAGE-ID}/insights/page_fans_by_like_source_unique?since=2017-07-01
 
-	Description:
-	Date:
-	feed_story:
-	mobile:
-	page_profile:
+					Description:
+					Date:
+					feed_story:
+					mobile:
+					page_profile:
 
-Daily City People Talking About (by City): The cities are going to differ each time; need to script this to grab whatever is available
-
-	Description:
-	Date:
-	City(1):
-	City(2):
-	City(x):
-
-
-Daily Country People Talking: These will probably differ from time to time
-{PAGE-ID}/insights/page_storytellers_by_country?since=2017-07-07
-	
-	Description:
-	Date:
-	MX:
-	US:
+				Daily Country People Talking: These will probably differ from time to time
+				{PAGE-ID}/insights/page_storytellers_by_country?since=2017-07-07
+					
+					Description:
+					Date:
+					MX:
+					US:
 
 Daily Logged-in Tab View: Not all fields are always in the JSON, need to search for them somehow when creating files
 {PAGE-ID}/insights/page_tab_views_login_top_unique?since=2017-07-07
@@ -137,35 +128,35 @@ Daily Check-Ins by Country: Unsure if this is the correct metric as there is no 
 	2:
 
 
-Daily Liked and Online:
-{PAGE-ID}/insights/page_fans_online?since=2017-07-07
-	
-	Description:
-	Date:
-	0:
-	1:
-	2:
-	3:
-	4:
-	5:
-	6:
-	7:
-	8:
-	9:
-	10:
-	11:
-	12:
-	13:
-	14:
-	15:
-	16:
-	17:
-	18:
-	19:
-	20:
-	21:
-	22:
-	23:
+				Daily Liked and Online:
+				{PAGE-ID}/insights/page_fans_online?since=2017-07-07
+					
+					Description:
+					Date:
+					0:
+					1:
+					2:
+					3:
+					4:
+					5:
+					6:
+					7:
+					8:
+					9:
+					10:
+					11:
+					12:
+					13:
+					14:
+					15:
+					16:
+					17:
+					18:
+					19:
+					20:
+					21:
+					22:
+					23:
 
 				Lifetime Likes by City: Fields will vary each time
 				{PAGE-ID}/insights/page_fans_city?since=2017-07-07
@@ -176,13 +167,13 @@ Daily Liked and Online:
 					City(2):
 					City(x):
 
-Lifetime Likes by Country: Fields will vary each time
-{PAGE-ID}/insights/page_fans_country?since=2017-07-07
-	
-	Description:
-	Date:
-	MY:
-	US:
+				Lifetime Likes by Country: Fields will vary each time
+				{PAGE-ID}/insights/page_fans_country?since=2017-07-07
+					
+					Description:
+					Date:
+					MY:
+					US:
 
 Lifetime Likes by Language: Fields will vary
 {PAGE-ID}/insights/page_fans_locale?since=2017-07-07
@@ -389,22 +380,30 @@ Lifetime Likes by Language: Fields will vary
 					U.55-64:
 					U.65+:
 
-28 Days Days City People Talking About Page: Only days_28 data is relevant, fields will change each pull
-{PAGE-ID}/insights/page_story_adds_by_city_unique?since=2017-07-07
+				28 Days Days City People Talking About Page: Only days_28 data is relevant, fields will change each pull
+				{PAGE-ID}/insights/page_story_adds_by_city_unique?since=2017-07-07
 
-	Description:
-	Date:
-	City(1):
-	City(2):
-	City(x):
+					Description:
+					Date:
+					City(1):
+					City(2):
+					City(x):
 
-28 Days Country People Talking About Page: Only days_28 data is relevant, fields will change possibly each pull
-{PAGE-ID}/insights/page_story_adds_by_country_unique?since=2017-07-07
+				Daily City People Talking About (by City): The cities are going to differ each time; need to script this to grab whatever is available
+				/insights/page_story_adds_by_city_unique?since=
+					Description:
+					Date:
+					City(1):
+					City(2):
+					City(x):
 
-	Description:
-	Date:
-	MX:
-	US:
+				28 Days Country People Talking About Page: Only days_28 data is relevant, fields will change possibly each pull
+				{PAGE-ID}/insights/page_story_adds_by_country_unique?since=2017-07-07
+
+					Description:
+					Date:
+					MX:
+					US:
 
 28 Days Language People Talking About Page: Only days_28 data is relevant, fields will change possibly each pull
 {PAGE-ID}/insights/page_storytellers_by_locale?since=2017-07-07

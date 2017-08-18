@@ -19,35 +19,14 @@ def WriteFile(filename,*args): #Write file in network storage
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_negative_feedback_by_type?since=%s' %daterange)
+posts = graph.get_connections(profile['id'], 'insights/page_fans_by_like_source_unique?since=%s' %daterange)
 
 for post in posts['data']:
-    var1 = post['name']
-    var2 = post['period']
-    var3 = post['title']
-    var4 = post['description']
-    var5 = post['id']
-    for value in post['values']:
-        try:
-            var20 = value['value']['hide_all_clicks']
-        except:
-            var20 = 0
-        try:
-            var21 = value['value']['hide_clicks']
-        except:
-            var21 = 0
-        try:
-            var22 = value['value']['unlike_page_clicks']
-        except:
-            var22 = 0
-        try:
-            var23 = value['value']['report_spam_clicks']
-        except:
-            var23 = 0
-        try:
-            var24 = value['value']['xbutton_clicks']
-        except:
-            var24 = 0
-        var25 = value['end_time']
-        WriteFile('NegativeFeedbackByType', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25)
+    for entry in post['values']:
+        if 'value' in entry:
+            for key, value in entry['value'].items():
+                WriteFile('FansByLikeSource',user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
+        else:
+            pass
+        #WriteFile('FansByCity', user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)
         #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)

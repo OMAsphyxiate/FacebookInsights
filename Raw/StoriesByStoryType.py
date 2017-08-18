@@ -1,6 +1,6 @@
 import csv, facebook, datetime, os
 
-access_token = 'EAACEdEose0cBAOzR56ZByTauMIe64hYPAMyNkZCZC96EHpmfs4BApNMMAWD0lzIy96hvZCBr5tQOsys5AKxV05Ik404HprsZBbdX2otDg3k40gTCVnmaq0SNsqUfDrl5ZB3PqH9coeGBvS1KX036bjwBzhlrGSSveVS3DtPcvnxoGjGrTQcH9J3ZA6YbsTqiZBQZD'
+access_token = 'EAACEdEose0cBAFxRz1bSwcKPl00YZA4Yj2YFLKnekeNgZAgguwYP6asmKGuhwT9nuIYCZATdMcumu5g7rubn2GTbU63gZCTAbsruhKCTDYuPlDaU6zhKNLc2n00lsMj5nWZBYrjfwNyIDOfYvn3S9LDXfxmE20PZAHBkyEZBp561hswCKLG6XKPw9VZBnTTAs8kZD'
 user = '159442580756185' #Page ID
 
 def PrintValues(*args): #Testing API data in print console
@@ -19,7 +19,7 @@ def WriteFile(filename,*args): #Write file in network storage
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_tab_views_login_top_unique?since=%s' %daterange)
+posts = graph.get_connections(profile['id'], 'insights/page_stories_by_story_type?since=%s' %daterange)
 
 for post in posts['data']:
     var1 = post['name']
@@ -29,57 +29,37 @@ for post in posts['data']:
     var5 = post['id']
     for value in post['values']:
         try:
-            var20 = value['value']['about']
+            var20 = value['value']['user post']
         except:
             var20 = 0
         try:
-            var21 = value['value']['community']
+            var21 = value['value']['checkin']
         except:
             var21 = 0
         try:
-            var22 = value['value']['custom']
+            var22 = value['value']['fan']
         except:
             var22 = 0
         try:
-            var23 = value['value']['home']
+            var23 = value['value']['question']
         except:
             var23 = 0
         try:
-            var24 = value['value']['photos']
+            var24 = value['value']['coupon']
         except:
             var24 = 0
         try:
-            var25 = value['value']['posts']
+            var25 = value['value']['event']
         except:
             var25 = 0
         try:
-            var26 = value['value']['profile_home']
+            var26 = value['value']['mention']
         except:
             var26 = 0
         try:
-            var27 = value['value']['profile_reviews']
+            var27 = value['value']['other']
         except:
             var27 = 0
-        try:
-            var28 = value['value']['reviews']
-        except:
-            var28 = 0
-        try:
-            var29 = value['value']['services']
-        except:
-            var29 = 0
-        try:
-            var30 = value['value']['videos']
-        except:
-            var30 = 0
-        try:
-            var31 = value['value']['notes']
-        except:
-            var31 = 0
-        try:
-            var32 = value['value']['album']
-        except:
-            var32 = 0
-        var33 = value['end_time']
-        WriteFile('TabViewLoginUnique',user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32,var33)
+        var28 = value['end_time']
+        WriteFile('StoriesByStoryType', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)
         #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)

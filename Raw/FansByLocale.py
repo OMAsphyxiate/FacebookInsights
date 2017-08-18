@@ -1,6 +1,6 @@
 import csv, facebook, datetime, os
 
-access_token = 'EAACEdEose0cBABuGb5pZCw6jGB0RRxRvWHz2aRscmUUOxbpIqqJZB6uG2anZAoUb9jXNqycvUiLJlT6EwhCXwHabJyDutZAFioxVQYL5POR6jO8fhIlEHUjh6LEDkuvJOtIhPtAWt4g6x1hV2k0UkwJHaEwZCCmg5ZCcO2Kxx3lcMKilZBIBeGNmnZB7KuSdm3Bh0p5occFIZBgZDZD'
+access_token = 'EAACEdEose0cBAFxRz1bSwcKPl00YZA4Yj2YFLKnekeNgZAgguwYP6asmKGuhwT9nuIYCZATdMcumu5g7rubn2GTbU63gZCTAbsruhKCTDYuPlDaU6zhKNLc2n00lsMj5nWZBYrjfwNyIDOfYvn3S9LDXfxmE20PZAHBkyEZBp561hswCKLG6XKPw9VZBnTTAs8kZD'
 user = '159442580756185' #Page ID
 
 def PrintValues(*args): #Testing API data in print console
@@ -19,11 +19,14 @@ def WriteFile(filename,*args): #Write file in network storage
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_fans_city?since=%s' %daterange)
+posts = graph.get_connections(profile['id'], 'insights/page_fans_locale?since=%s' %daterange)
 
 for post in posts['data']:
     for entry in post['values']:
-        for key, value in entry['value'].items():
-            WriteFile('FansByCity',user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
+        if 'value' in entry:
+            for key, value in entry['value'].items():
+                WriteFile('FansByLocale',user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
+        else:
+            pass
         #WriteFile('FansByCity', user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)
         #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)

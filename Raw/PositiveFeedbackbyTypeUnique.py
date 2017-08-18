@@ -1,6 +1,6 @@
 import csv, facebook, datetime, os
 
-access_token = 'EAACEdEose0cBAKu2IioJ6snNLYNLUFt9udIlCn8otFCvQrLdu6U6tXJZB1xXL6YRUJ4v12BQken2DQ41ZBKXdWpgZBfmjcXqbutYgYpwTqRk6tAiS275l7ZCNmKjvnrd1nHQC4KpgRcUkWZCfEjBb67r7PFHzAydAckApnKhTrAje2sdDkFPMjEennl8w3VFAS5gHDgw9ggZDZD'
+access_token = 'EAACEdEose0cBAIgGYwUkawU1ki6TSl8nNUHbOZCZBXbAtSiTngoZARNorE0VFBGBOOA7NrgHNGlosISeFxZBKHrolZApi14VrYMFvH0dkDqaOBVjBFrPxZBa4eGTV3JI1TR1XuZA0Kz1DNlgH4TxHF9IS7pHj4dX8X4yQzIGqHQ32F3lizhqOOtyeQCS5Dddg0ZD'
 user = '159442580756185' #Page ID
 
 def PrintValues(*args): #Testing API data in print console

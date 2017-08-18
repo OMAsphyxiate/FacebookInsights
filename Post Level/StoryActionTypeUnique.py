@@ -1,7 +1,7 @@
 import facebook, requests, csv, os, unicodecsv as csv
 
-access_token = ''
-user = '' #Page ID
+access_token = 'EAACEdEose0cBAEB4VWvpZCa1rL81kVLWAiHUt3ofQd91FQUv9mrSnHn8ZCxbcElRKZAzReWrh7ppdyFu3XuZApV6EVKmwy0MgdBEeFL5WqD2o5hwLXU1475cOwPbpvezZClEcUiS8qS4jyycApxMOSJYlz7UvS551RMurUxZC2xJ4UgZCQHktsBoENl6V0YFVUZD'
+user = '159442580756185' #Page ID
 
 def WriteFile(filename,*args): #Write file in network storage
     FilePath = "//10.10.10.252/datafiles/Dashboard/Facebook Data/%s.txt" %filename

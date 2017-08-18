@@ -1,6 +1,6 @@
 import csv, facebook, datetime, os
 
-access_token = 'EAACEdEose0cBAOzR56ZByTauMIe64hYPAMyNkZCZC96EHpmfs4BApNMMAWD0lzIy96hvZCBr5tQOsys5AKxV05Ik404HprsZBbdX2otDg3k40gTCVnmaq0SNsqUfDrl5ZB3PqH9coeGBvS1KX036bjwBzhlrGSSveVS3DtPcvnxoGjGrTQcH9J3ZA6YbsTqiZBQZD'
+access_token = 'EAACEdEose0cBAEB4VWvpZCa1rL81kVLWAiHUt3ofQd91FQUv9mrSnHn8ZCxbcElRKZAzReWrh7ppdyFu3XuZApV6EVKmwy0MgdBEeFL5WqD2o5hwLXU1475cOwPbpvezZClEcUiS8qS4jyycApxMOSJYlz7UvS551RMurUxZC2xJ4UgZCQHktsBoENl6V0YFVUZD'
 user = '159442580756185' #Page ID
 
 def PrintValues(*args): #Testing API data in print console
@@ -19,7 +19,7 @@ def WriteFile(filename,*args): #Write file in network storage
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(access_token)
 profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_posts_impressions_frequency_distribution?since=%s' %daterange)
+posts = graph.get_connections(profile['id'], 'insights/page_consumptions_by_consumption_type?since=%s' %daterange)
 
 for post in posts['data']:
     var1 = post['name']
@@ -29,37 +29,26 @@ for post in posts['data']:
     var5 = post['id']
     for value in post['values']:
         try:
-            var20 = value['value']['1']
+            var20 = value['value']['video play']
         except:
             var20 = 0
         try:
-            var21 = value['value']['2']
+            var21 = value['value']['other clicks']
         except:
             var21 = 0
         try:
-            var22 = value['value']['3']
+            var22 = value['value']['photo view']
         except:
             var22 = 0
         try:
-            var23 = value['value']['4']
+            var23 = value['value']['link clicks']
         except:
             var23 = 0
         try:
-            var24 = value['value']['5']
+            var24 = value['value']['button clicks']
         except:
             var24 = 0
-        try:
-            var25 = value['value']['6-10']
-        except:
-            var25 = 0
-        try:
-            var26 = value['value']['11-20']
-        except:
-            var26 = 0
-        try:
-            var27 = value['value']['21+']
-        except:
-            var27 = 0
-        var28 = value['end_time']
-        WriteFile('ImpressionFrequencyDistribution', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)
+
+        var25 = value['end_time']
+        WriteFile('ConsumptionByType', user, var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25)
         #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)
