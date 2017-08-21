@@ -1,28 +1,25 @@
-import csv, facebook, datetime, os
+import csv, facebook, datetime, os, sys, pyodbc
+sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/')
+sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
+import Connect #Import connection file
+import Functions #Import Functions for creating file
 
-access_token = 'EAACEdEose0cBABuGb5pZCw6jGB0RRxRvWHz2aRscmUUOxbpIqqJZB6uG2anZAoUb9jXNqycvUiLJlT6EwhCXwHabJyDutZAFioxVQYL5POR6jO8fhIlEHUjh6LEDkuvJOtIhPtAWt4g6x1hV2k0UkwJHaEwZCCmg5ZCcO2Kxx3lcMKilZBIBeGNmnZB7KuSdm3Bh0p5occFIZBgZDZD'
-user = '159442580756185' #Page ID
+FileName = Connect.FilePath + "StoryByCountryUnique.txt"
 
-def PrintValues(*args): #Testing API data in print console
-    print(args)
-
-def WriteFile(filename,*args): #Write file in network storage
-    FilePath = "//10.10.10.252/datafiles/Dashboard/Facebook Data/%s.txt" %filename
-    if os.path.exists(FilePath): #Append if file Exists
-        append_check = 'a'
-    else: #Else create file
-        append_check = 'w'
-    with open(FilePath, append_check) as csvfile: #Write rows to file
-        writer = csv.writer(csvfile, delimiter='|')
-        writer.writerow(args)
+try:
+    os.remove(FileName)
+except OSError:
+    pass
 
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
-graph = facebook.GraphAPI(access_token)
-profile = graph.get_object(user)
-posts = graph.get_connections(profile['id'], 'insights/page_story_adds_by_country_unique?since=%s' %daterange)
+graph = facebook.GraphAPI(Connect.FACEBOOK_USER_TOKEN)
 
-for post in posts['data']:
-    for entry in post['values']:
-        for key, value in entry['value'].items():
-            WriteFile('StoryByCountryUnique',user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
-            #PrintValues(user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
+for item in Connect.UserList:
+    profile = graph.get_object(str(item))
+    posts = graph.get_connections(profile['id'], 'insights/page_story_adds_by_country_unique?since=%s' %daterange)
+
+    for post in posts['data']:
+        for entry in post['values']:
+            for key, value in entry['value'].items():
+                Functions.WriteFile('StoryByCountryUnique',str(item),post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
+                #PrintValues(user,post['name'],post['period'],post['title'],post['description'],post['id'],key,value,entry['end_time'])
