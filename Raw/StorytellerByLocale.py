@@ -4,7 +4,7 @@ sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
 import Connect #Import connection file
 import Functions #Import Functions for creating file
 
-FileName = Connect.FilePath + "StorytellerByLocale.txt"
+FileName = Connect.FBPath + "StorytellerByLocale.txt"
 
 try:
     os.remove(FileName)

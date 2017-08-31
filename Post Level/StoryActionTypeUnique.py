@@ -4,7 +4,7 @@ sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
 import Connect #Import connection file
 import Functions #Import Functions for creating file
 
-FileName = Connect.FilePath + "StoryActionTypeUnique.txt"
+FileName = Connect.FBPath + "StoryActionTypeUnique.txt"
 
 try:
     os.remove(FileName)
