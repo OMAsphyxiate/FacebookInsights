@@ -1,8 +1,7 @@
 import csv, facebook, datetime, os, sys, pyodbc
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/')
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
 import Connect #Import connection file
-import Functions #Import Functions for creating file
+from FacebookInsights import Functions #Import Functions for creating file
+from DatabaseSyncs import DBFunctions as dbf
 
 FileName = Connect.FBPath + "NegativeFeedbackTypeUnique.txt"
 
@@ -14,7 +13,7 @@ except OSError:
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(Connect.FACEBOOK_USER_TOKEN)
 
-for item in Connect.UserList:
+for item in dbf.FacebookList:
     profile = graph.get_object(str(item))
     posts = graph.get_connections(profile['id'], 'posts?fields=id,permalink_url,message,type,created_time,insights.metric(post_negative_feedback_by_type_unique).period(lifetime)')    
     for post in posts['data']:
@@ -62,4 +61,4 @@ for item in Connect.UserList:
         except:
             var10 = 0
 
-        Functions.WriteFile('NegativeFeedbackTypeUnique', str(item),var1,var2,var3,var4,var5,var6,var7,var8,var9,var10) #Write data to file
+        Functions.WriteFile(FileName, str(item),var1,var2,var3,var4,var5,var6,var7,var8,var9,var10) #Write data to file

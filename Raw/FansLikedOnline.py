@@ -1,8 +1,7 @@
 import csv, facebook, datetime, os, sys, pyodbc
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/')
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
 import Connect #Import connection file
-import Functions #Import Functions for creating file
+from FacebookInsights import Functions #Import Functions for creating file
+from DatabaseSyncs import DBFunctions as dbf
 
 FileName = Connect.FBPath + "FansLikedOnline.txt"
 
@@ -14,7 +13,7 @@ except OSError:
 daterange = datetime.datetime.now() - datetime.timedelta(days=30)
 graph = facebook.GraphAPI(Connect.FACEBOOK_USER_TOKEN)
 
-for item in Connect.UserList:
+for item in dbf.FacebookList:
     profile = graph.get_object(str(item))
     posts = graph.get_connections(profile['id'], 'insights/page_fans_online?since=%s' %daterange)
 
@@ -118,5 +117,5 @@ for item in Connect.UserList:
             except:
                 var42 = 0
             var43 = value['end_time']
-            Functions.WriteFile('FansLikedOnline', str(item), var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32,var33,var34,var35,var36,var37,var38,var39,var40,var41,var42,var43)
+            Functions.WriteFile(FileName, str(item), var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28,var29,var30,var31,var32,var33,var34,var35,var36,var37,var38,var39,var40,var41,var42,var43)
             #PrintValues(user,var1,var2,var3,var4,var5,var20,var21,var22,var23,var24,var25,var26,var27,var28)

@@ -4,7 +4,7 @@ def PrintValues(*args): #Testing API data in print console
     print(args)
 
 def WriteFile(filename,*args): #Write file in network storage
-    FilePath = "//10.10.10.252/datafiles/Dashboard/Facebook Data/%s.txt" %filename
+    FilePath = filename
     if os.path.exists(FilePath): #Append if file Exists
         append_check = 'a'
     else: #Else create file

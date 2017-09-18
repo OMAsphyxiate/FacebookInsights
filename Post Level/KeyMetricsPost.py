@@ -1,8 +1,7 @@
 import csv, facebook, datetime, os, sys, pyodbc
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/')
-sys.path.insert(0, 'C:/Users/Christian/Desktop/GitHub/FacebookInsights/')
 import Connect #Import connection file
-import Functions #Import Functions for creating file
+from FacebookInsights import Functions #Import Functions for creating file
+from DatabaseSyncs import DBFunctions as dbf
 
 FileName = Connect.FBPath + "KeyMetricsPost.txt"
 
@@ -26,5 +25,5 @@ for item in Connect.UserList:
         for key in post['insights']:
             for entry in post['insights']['data']:
                 for value in entry['values']:
-                    Functions.WriteFile('KeyMetricsPost',str(item),post['id'],post['permalink_url'],var1,post['type'],post['created_time'],\
+                    Functions.WriteFile(FileName,str(item),post['id'],post['permalink_url'],var1,post['type'],post['created_time'],\
                     entry['name'],entry['period'],entry['title'],entry['description'],entry['id'],value['value'])
