@@ -10,7 +10,7 @@ try:
 except OSError:
     pass
 
-daterange = datetime.datetime.now() - datetime.timedelta(days=30)
+daterange = datetime.datetime.now() - datetime.timedelta(days=60)
 graph = facebook.GraphAPI(Connect.FACEBOOK_USER_TOKEN)
 
 for item in dbf.FacebookList:

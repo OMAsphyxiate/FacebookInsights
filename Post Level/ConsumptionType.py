@@ -19,9 +19,12 @@ for item in dbf.FacebookList:
 
     for post in posts['data']:
         var1 = post['id']
-        var2 = post['permalink_url']
         try:
-            var3 = post['message'].replace('\n',' ')
+            var2 = post['permalink_url']
+        except:
+            var2 = 'No URL'
+        try:
+            var3 = post['message'].replace("'","").replace('\n',' ').replace('"','')
         except:
             var3 = 'No Message'
         try:

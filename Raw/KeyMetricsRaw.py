@@ -10,7 +10,7 @@ try:
 except OSError:
     pass
 
-daterange = datetime.datetime.now() - datetime.timedelta(days=30)
+daterange = datetime.datetime.now() - datetime.timedelta(days=60)
 graph = facebook.GraphAPI(Connect.FACEBOOK_USER_TOKEN)
 
 for item in dbf.FacebookList:
@@ -21,7 +21,7 @@ for item in dbf.FacebookList:
         for entry in post['values']:
             try:
                 Functions.WriteFile(FileName,str(item),post['name'],post['period'],post['title'],post['description'],post['id'],\
-                entry['value'],entry['end_time'])
+                entry['value'] or 0,entry['end_time'].replace('T07:00:00+0000',''))
             except:
                 e = sys.exc_info()[0]
-                print( "<p>Error: %s</p>" % e )
+                print( "<p>Error on ID-%s: %s</p>" % (str(item),e) )
